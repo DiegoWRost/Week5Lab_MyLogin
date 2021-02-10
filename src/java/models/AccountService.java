@@ -5,10 +5,26 @@
  */
 package models;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Diego Weidle Rost
  */
-public class AccountService {
+public class AccountService implements Serializable {
     
+    private final String ABE = "abe";
+    private final String BARB = "barb";
+    private final String PSWD = "password";
+    
+    public AccountService () {
+        
+    }
+    
+    public User login (String username, String password) {
+        if ((username.equals(ABE) || username.equals(BARB)) && password.equals(PSWD)) {
+            return new User(username, null);
+        }
+        return null;
+    }
 }
