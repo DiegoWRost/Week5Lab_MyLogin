@@ -16,7 +16,7 @@
         ${message}
         <form action="login" method="post">
             <p><strong>Username: </strong><input type="text" name="username" value="${username}"><br>
-            <strong>Password: </strong><input type="text" name="password" value="${password}"></p>
+            <strong>Password: </strong><input type="password" name="password" value="${password}"></p>
             <input type="submit" value="Log in">
         </form>
     </body>
